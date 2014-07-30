@@ -1,0 +1,29 @@
+
+<table class ="time_events">
+  <thead>
+    <tr>
+      <th class="time">Time</th>
+        <% @week.each do |day| %>
+          <th id="day-<%= "#{day.name}" %>"><%= "#{day.name}" %></th>
+        <% end %>
+    </tr>
+    </thead>
+    <tbody>
+     <% @day.each do |time| %>
+     <tr id="<%= "#{time}"%>">
+      <th>
+        <%= "#{time}"%>
+      </th>
+        <% @week.each do |hour| %>
+            <td>
+              <%= hour.time %>
+
+             <% @events.each do |event| %>
+              <%#= planned to loop through events checking if   %>
+              <% end %>
+             <% end %>
+           </td>
+     </tr>
+     <% end %>
+   </tbody>
+   </table>
